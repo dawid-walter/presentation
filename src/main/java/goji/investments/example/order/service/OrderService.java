@@ -8,7 +8,6 @@ import goji.investments.example.order.web.CreateOrderRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -36,6 +35,8 @@ class OrderService implements OrderCRUDService {
 
     @Override
     public List<Order> filterByCurrency(CurrencyType currency) {
-        return Collections.emptyList();
+        return repository.findAll().stream()
+                .filter(order -> order.getCurrency() == currency)
+                .toList();
     }
 }
