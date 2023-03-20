@@ -1,3 +1,41 @@
+***
+Author: Dawid Walter | Email: [davedohc@aim.com](davedohc@aim.com)
+***
+
+## Application for Goji interview process
+
+REST API service which provide CRUD operations for Order business domain
+
+Tech stack:
+1. Java 17
+2. Spring Boot Framework 3.0
+3. H2 in-memory database (sql relational)
+4. Spring JPA to access data source
+5. JUnit 5, Mockito, MockMVC, AssertJ for tests
+6. SpringDoc OpenApi for generating swagger-ui API documentation
+7. Lombok for autogenerate boilerplate code
+
+to build application:
+```
+mvn install
+```
+to run application:
+```
+mvn compile exec:java
+```
+***
+
+Spring Boot application will start, creating local server on port 8080.
+
+All API endpoints are documented using swagger and can be accessed and tried on this URL: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+
+
+***
+
+![img.png](img.png)
+
+***
+
 # code challenge
 Here we have a Maven Spring Boot application. This application will manage `Order` resource. Please implement the following 3 endpoints based on given requirements.
 
