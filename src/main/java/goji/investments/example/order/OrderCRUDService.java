@@ -1,5 +1,6 @@
 package goji.investments.example.order;
 
+import goji.investments.example.order.model.CurrencyType;
 import goji.investments.example.order.model.Order;
 import goji.investments.example.order.web.CreateOrderRequest;
 
@@ -13,4 +14,6 @@ public interface OrderCRUDService {
     Optional<Order> findById(UUID id);
 
     Order add(CreateOrderRequest request);
+
+    List<Order> filterByCurrency(CurrencyType currency);
 }
