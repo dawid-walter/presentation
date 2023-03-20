@@ -1,4 +1,4 @@
-package goji.investments.example;
+package goji.investments.example.service;
 
 import goji.investments.example.order.db.OrderJpaRepository;
 import goji.investments.example.order.model.Order;
