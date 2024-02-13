@@ -6,6 +6,7 @@ import goji.investments.example.order.model.CurrencyType;
 import goji.investments.example.order.model.Order;
 import goji.investments.example.order.web.CreateOrderRequest;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +21,8 @@ import static org.springframework.data.domain.Sort.by;
 @RequiredArgsConstructor
 public
 class OrderService implements OrderCRUDService {
+
+    @Qualifier("inMemoryDb")
     private final OrderJpaRepository repository;
 
     @Override
